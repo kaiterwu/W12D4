@@ -7026,3 +7026,151 @@ Processing by Api::BenchesController#show as JSON
 Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 880)
 
 
+Started GET "/api/benches/" for ::1 at 2023-03-30 16:20:31 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 24.3ms | Allocations: 4324)
+Completed 200 OK in 25ms (Views: 24.9ms | ActiveRecord: 10.2ms | Allocations: 4606)
+
+
+Started GET "/api/benches/" for ::1 at 2023-03-30 16:21:42 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (1.1ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 4.0ms | Allocations: 1331)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.1ms | Allocations: 1970)
+
+
+Started GET "/api/benches/" for ::1 at 2023-03-30 16:21:45 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 2.9ms | Allocations: 1089)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1347)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:22:08 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 822)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-03-30 16:22:11 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 2.6ms | Allocations: 1089)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 1318)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:25:44 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:25:47 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:01 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:06 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:11 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:16 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:20 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:24 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:29 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:30 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:32 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:34 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 16:26:41 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 737)
+
+
+Started POST "/api/benches/" for 127.0.0.1 at 2023-03-30 16:27:47 -0400
+Processing by Api::BenchesController#create as JSON
+  Parameters: {"title"=>"hello", "description"=>"hi", "price"=>20, "seating"=>5, "lat"=>10, "lng"=>20, "bench"=>{"title"=>"hello", "description"=>"hi", "price"=>20, "seating"=>5, "lat"=>10, "lng"=>20}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/benches_controller.rb:10:in `create'
+  [1m[36mBench Create (0.6ms)[0m  [1m[32mINSERT INTO "benches" ("title", "description", "price", "seating", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "hello"], ["description", "hi"], ["price", 20], ["seating", 5], ["lat", 10.0], ["lng", 20.0], ["created_at", "2023-03-30 20:27:48.006368"], ["updated_at", "2023-03-30 20:27:48.006368"]]
+  ↳ app/controllers/api/benches_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/benches_controller.rb:10:in `create'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.6ms | Allocations: 239)
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 2.9ms | Allocations: 3957)
+
+

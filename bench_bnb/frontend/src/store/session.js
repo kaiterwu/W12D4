@@ -97,3 +97,7 @@ const sessionReducer = (state= initialState, action) => {
 
 export default sessionReducer;
 
+
+/*
+a = {title: 'hello',description:'hi',price:20,seating:5,lat:10,lng:20}
+*/
