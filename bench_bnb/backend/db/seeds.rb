@@ -33,4 +33,16 @@ ApplicationRecord.transaction do
     end
   
     puts "Done!"
+
+   5.times do 
+    Bench.create!({
+      title: Faker::Games::SuperSmashBros.stage,
+      description: Faker::Fantasy::Tolkien.poem,
+      price: rand(10..1000),
+      seating: rand(1..10),
+      lat: rand(-90.00000000000000..90.00000000000000),
+      lng: rand(-180.00000000000000..180.00000000000000)
+   })
+   end 
+
   end
