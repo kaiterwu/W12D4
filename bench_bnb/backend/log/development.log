@@ -6175,3 +6175,854 @@ Migrating to CreateBenches (20230330152818)
   [1m[36mBench Create (0.2ms)[0m  [1m[32mINSERT INTO "benches" ("title", "description", "price", "seating", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Port Town Aero Dive"], ["description", "Hey! Now! Come Hoy Now! Whither Do You Wander?"], ["price", 24], ["seating", 8], ["lat", 88.43857291545447], ["lng", 35.962191706419475], ["created_at", "2023-03-30 18:47:16.058717"], ["updated_at", "2023-03-30 18:47:16.058717"]]
   [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mBench Load (1.1ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+Started GET "/" for ::1 at 2023-03-30 14:48:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kaiwu/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kaiwu/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.0ms | Allocations: 526)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 2805)
+
+
+Started GET "/" for ::1 at 2023-03-30 14:50:23 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kaiwu/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kaiwu/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 281)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 918)
+
+
+Started GET "/api/benches" for ::1 at 2023-03-30 14:50:27 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description,:price,:seating,...
+               ^
+/Users/kaiwu/Desktop/class_app_academy/W12/W12D4/bench_bnb/backend/app/controllers/api/benches_controller.rb:27: syntax error, unexpected end-of-input, expecting `end':
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/2ab4db0b1f8320f4/variables" for ::1 at 2023-03-30 14:50:27 -0400
+Started GET "/api/benches" for ::1 at 2023-03-30 14:51:22 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description,:price,:seating,...
+               ^:
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/c2db31d5e9b469b3/variables" for ::1 at 2023-03-30 14:51:22 -0400
+Started GET "/api/benches" for ::1 at 2023-03-30 14:53:40 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description,:price,:seating,...
+               ^:
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/d20e7dafddf778c0/variables" for ::1 at 2023-03-30 14:53:40 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:53:42 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description,:price,:seating,...
+               ^:
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/7e0eff619f3baee6/variables" for ::1 at 2023-03-30 14:53:42 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:53:51 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.9ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.9ms | Allocations: 4254)
+
+
+
+ActiveRecord::StatementInvalid - PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "benches".* FROM "benches" WHERE (1) LIMIT $1
+                                                 ^:
+  app/controllers/api/benches_controller.rb:18:in `show'
+
+Started POST "/__better_errors/9c4d85ec5afbe3f9/variables" for ::1 at 2023-03-30 14:53:51 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:54:10 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description,:price,:seating,...
+               ^:
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/e812186ccfd1c1f8/variables" for ::1 at 2023-03-30 14:54:11 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:55:49 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description)
+               ^:
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/40d14d73b0f7f839/variables" for ::1 at 2023-03-30 14:55:49 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:55:51 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description)
+               ^:
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/d62020e6b16ac308/variables" for ::1 at 2023-03-30 14:55:51 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:55:52 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description)
+               ^:
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/fe15f9364e01d0d0/variables" for ::1 at 2023-03-30 14:55:52 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:55:53 -0400
+
+SyntaxError - syntax error, unexpected ',', expecting ')'
+        (:title,:description)
+               ^:
+  app/controllers/api/benches_controller.rb:26:in `'
+
+Started POST "/__better_errors/9c4a2277c1937243/variables" for ::1 at 2023-03-30 14:55:53 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:56:17 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (1.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.6ms | Allocations: 3163)
+
+
+
+ActiveRecord::StatementInvalid - PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "benches".* FROM "benches" WHERE (1) LIMIT $1
+                                                 ^:
+  app/controllers/api/benches_controller.rb:18:in `show'
+
+Started POST "/__better_errors/78f4f7dfdd9583e1/variables" for ::1 at 2023-03-30 14:56:17 -0400
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:56:27 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 348)
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 6.9ms | Allocations: 10843)
+
+
+Started GET "/api/benches/" for ::1 at 2023-03-30 14:56:38 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (1.2ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 8.3ms | Allocations: 5937)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.2ms | Allocations: 6369)
+
+
+
+NoMethodError - undefined method `map' for 1:Integer
+    collection.map do |element|
+              ^^^^
+Did you mean?  tap:
+  app/views/api/benches/index.json.jbuilder:3
+  app/views/api/benches/index.json.jbuilder:2
+  app/views/api/benches/index.json.jbuilder:1
+  app/controllers/api/benches_controller.rb:5:in `index'
+
+Started POST "/__better_errors/ae4305888a1029f3/variables" for ::1 at 2023-03-30 14:56:38 -0400
+Started GET "/api/benches/2" for ::1 at 2023-03-30 14:56:51 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 179)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 1037)
+
+
+Started GET "/api/benches/3" for ::1 at 2023-03-30 14:56:54 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 154)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 864)
+
+
+Started GET "/api/benches/4" for ::1 at 2023-03-30 14:56:56 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 153)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 863)
+
+
+Started GET "/api/benches/1" for ::1 at 2023-03-30 14:57:03 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.5ms | Allocations: 153)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 859)
+
+
+Started GET "/api/benches/" for ::1 at 2023-03-30 14:57:06 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 4.3ms | Allocations: 4937)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 5243)
+
+
+
+NoMethodError - undefined method `map' for 1:Integer
+    collection.map do |element|
+              ^^^^
+Did you mean?  tap:
+  app/views/api/benches/index.json.jbuilder:3
+  app/views/api/benches/index.json.jbuilder:2
+  app/views/api/benches/index.json.jbuilder:1
+  app/controllers/api/benches_controller.rb:5:in `index'
+
+Started POST "/__better_errors/2bfd843f34113af1/variables" for ::1 at 2023-03-30 14:57:06 -0400
+Started GET "/api/benches/" for ::1 at 2023-03-30 14:57:46 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 3.6ms | Allocations: 1143)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 1817)
+
+
+Started GET "/api/benches/" for ::1 at 2023-03-30 14:57:49 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 2.0ms | Allocations: 899)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1157)
+
+
+Started GET "/api/benches/" for ::1 at 2023-03-30 14:59:14 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 3.2ms | Allocations: 1425)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 2064)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (5053.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bench_bnb_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (32.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bench_bnb_development"[0m
+  [1m[35m (16.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bench_bnb_test"[0m
+  [1m[35m (39.8ms)[0m  [1m[35mCREATE DATABASE "bench_bnb_development" ENCODING = 'unicode'[0m
+  [1m[35m (39.9ms)[0m  [1m[35mCREATE DATABASE "bench_bnb_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "benches" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "benches" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "price" integer NOT NULL, "seating" integer DEFAULT 2 NOT NULL, "lat" float NOT NULL, "lng" float NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230330152818)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230328012857);
+
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-30 19:00:41.629582"], ["updated_at", "2023-03-30 19:00:41.629582"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "4edcda4f292cb4fd4219493b15cc3a6b211a99d7"], ["created_at", "2023-03-30 19:00:41.632964"], ["updated_at", "2023-03-30 19:00:41.632964"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "benches" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "benches" ("id" bigserial primary key, "title" character varying NOT NULL, "description" text NOT NULL, "price" integer NOT NULL, "seating" integer DEFAULT 2 NOT NULL, "lat" float NOT NULL, "lng" float NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230330152818)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230328012857);
+
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-30 19:00:41.656003"], ["updated_at", "2023-03-30 19:00:41.656003"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-03-30 19:00:41.660813"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "4edcda4f292cb4fd4219493b15cc3a6b211a99d7"], ["created_at", "2023-03-30 19:00:41.662829"], ["updated_at", "2023-03-30 19:00:41.662829"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo-lition"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "demo@user.io"], ["username", "Demo-lition"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:41.931742"], ["updated_at", "2023-03-30 19:00:41.931742"]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "edwardo_ledner"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jade@collier.biz"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "jade@collier.biz"], ["username", "edwardo_ledner"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:42.779521"], ["updated_at", "2023-03-30 19:00:42.779521"]]
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joie"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "viola.kassulke@walker-brown.org"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "viola.kassulke@walker-brown.org"], ["username", "joie"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:43.023029"], ["updated_at", "2023-03-30 19:00:43.023029"]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "louie_luettgen"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "doug_gutmann@hodkiewicz.org"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "doug_gutmann@hodkiewicz.org"], ["username", "louie_luettgen"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:43.265783"], ["updated_at", "2023-03-30 19:00:43.265783"]]
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bernadette"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "davida@wisoky-corkery.info"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "davida@wisoky-corkery.info"], ["username", "bernadette"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:43.511101"], ["updated_at", "2023-03-30 19:00:43.511101"]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "john.kunze"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "clifton_christiansen@gorczany-ankunding.co"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "clifton_christiansen@gorczany-ankunding.co"], ["username", "john.kunze"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:43.755765"], ["updated_at", "2023-03-30 19:00:43.755765"]]
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "maxwell"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "terrance_schowalter@hermiston.io"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "terrance_schowalter@hermiston.io"], ["username", "maxwell"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:44.007500"], ["updated_at", "2023-03-30 19:00:44.007500"]]
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "corey_lebsack"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "reinaldo.rosenbaum@medhurst.net"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "reinaldo.rosenbaum@medhurst.net"], ["username", "corey_lebsack"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:44.256035"], ["updated_at", "2023-03-30 19:00:44.256035"]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "porsche.weissnat"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joan@barton-funk.info"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "joan@barton-funk.info"], ["username", "porsche.weissnat"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:44.501786"], ["updated_at", "2023-03-30 19:00:44.501786"]]
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "huey_jerde"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "al_gleichner@hoppe-ohara.net"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "al_gleichner@hoppe-ohara.net"], ["username", "huey_jerde"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:44.746745"], ["updated_at", "2023-03-30 19:00:44.746745"]]
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:54:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "dusty"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "quentin_morissette@nicolas-marks.info"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "quentin_morissette@nicolas-marks.info"], ["username", "dusty"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-30 19:00:44.990442"], ["updated_at", "2023-03-30 19:00:44.990442"]]
+  [1m[36mBench Create (0.9ms)[0m  [1m[32mINSERT INTO "benches" ("title", "description", "price", "seating", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Iwagakure (Stone Village)"], ["description", "Roads go ever, ever on"], ["price", 749], ["seating", 5], ["lat", 87.66051131848468], ["lng", -67.75200044079509], ["created_at", "2023-03-30 19:00:44.998009"], ["updated_at", "2023-03-30 19:00:44.998009"]]
+  [1m[36mBench Create (0.2ms)[0m  [1m[32mINSERT INTO "benches" ("title", "description", "price", "seating", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Kumogakure (Cloud Village)"], ["description", "Out of doubt, out of dark, to the day’s rising"], ["price", 419], ["seating", 10], ["lat", -48.527468313400064], ["lng", -4.767864069850475], ["created_at", "2023-03-30 19:00:45.000038"], ["updated_at", "2023-03-30 19:00:45.000038"]]
+  [1m[36mBench Create (0.2ms)[0m  [1m[32mINSERT INTO "benches" ("title", "description", "price", "seating", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Kirigakure (Mist Village)"], ["description", "In western lands beneath the Sun"], ["price", 764], ["seating", 4], ["lat", 28.18838026658797], ["lng", 87.02742663485725], ["created_at", "2023-03-30 19:00:45.000907"], ["updated_at", "2023-03-30 19:00:45.000907"]]
+  [1m[36mBench Create (0.2ms)[0m  [1m[32mINSERT INTO "benches" ("title", "description", "price", "seating", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Kumogakure (Cloud Village)"], ["description", "All That Is Gold Does Not Glitter"], ["price", 264], ["seating", 10], ["lat", 9.384275696096793], ["lng", -119.23151302980273], ["created_at", "2023-03-30 19:00:45.001665"], ["updated_at", "2023-03-30 19:00:45.001665"]]
+  [1m[36mBench Create (0.2ms)[0m  [1m[32mINSERT INTO "benches" ("title", "description", "price", "seating", "lat", "lng", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Iwagakure (Stone Village)"], ["description", "Arise now, arise, Riders of Theoden!"], ["price", 970], ["seating", 4], ["lat", 18.954216397126032], ["lng", 55.48959834134496], ["created_at", "2023-03-30 19:00:45.002415"], ["updated_at", "2023-03-30 19:00:45.002415"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/benches/" for ::1 at 2023-03-30 15:01:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 12.1ms | Allocations: 7940)
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 6.6ms | Allocations: 11122)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:19:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 3.9ms | Allocations: 4888)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-03-30 15:20:11 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (3.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 20.7ms | Allocations: 7716)
+Completed 200 OK in 27ms (Views: 14.5ms | ActiveRecord: 11.2ms | Allocations: 10459)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:22:54 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 895)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:23:04 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 752)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-03-30 15:23:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (1.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 13.2ms | Allocations: 7940)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 7.1ms | Allocations: 11122)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:25:31 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.8ms | Allocations: 4220)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:25:47 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 771)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:26:00 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:26:10 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:26:20 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 752)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:26:40 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 752)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:26:42 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:26:47 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 738)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:26:50 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:27:01 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:27:08 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:27:24 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 738)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-03-30 15:27:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.9ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 13.8ms | Allocations: 7940)
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 7.5ms | Allocations: 11122)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:29:19 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 4220)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:29:22 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 771)
+
+
+Started GET "/api/benches" for 127.0.0.1 at 2023-03-30 15:29:24 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 1.9ms | Allocations: 1224)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1488)
+
+
+Started GET "/api/benches/" for ::1 at 2023-03-30 15:29:51 -0400
+Processing by Api::BenchesController#index as JSON
+  Rendering api/benches/index.json.jbuilder
+  [1m[36mBench Load (0.4ms)[0m  [1m[34mSELECT "benches".* FROM "benches"[0m
+  ↳ app/views/api/benches/index.json.jbuilder:2
+  Rendered api/benches/index.json.jbuilder (Duration: 3.0ms | Allocations: 1197)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1434)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:31:37 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:31:40 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:31:50 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 738)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:32:00 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 738)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:32:07 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:32:11 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 738)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:32:21 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 738)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:32:23 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:32:35 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:33:08 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:33:20 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:33:31 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:33:33 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:33:39 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:33:45 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:33:56 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:34:00 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:34:09 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:34:11 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 737)
+
+
+Started GET "/api/benches/undefined" for 127.0.0.1 at 2023-03-30 15:35:24 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mBench Load (0.3ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/errors/internal_server_error.json.jbuilder
+  Rendered api/errors/internal_server_error.json.jbuilder (Duration: 0.8ms | Allocations: 171)
+
+ActiveRecord::RecordNotFound - Couldn't find Bench with 'id'=undefined:
+	app/controllers/api/benches_controller.rb:18:in `show'
+
+Completed 500 Internal Server Error in 5ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 3470)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:36:06 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 737)
+
+
+Started GET "/api/benches/2" for 127.0.0.1 at 2023-03-30 15:36:13 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (1.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.9ms | Allocations: 224)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 1.8ms | Allocations: 995)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:36:52 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 737)
+
+
+Started GET "/api/benches/2" for 127.0.0.1 at 2023-03-30 15:36:56 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 6.4ms | Allocations: 5784)
+  Rendering api/errors/internal_server_error.json.jbuilder
+  Rendered api/errors/internal_server_error.json.jbuilder (Duration: 0.3ms | Allocations: 219)
+
+ActionView::Template::Error - undefined local variable or method `bench' for #<ActionView::Base:0x000000000049c0>
+Did you mean?  @bench:
+	app/views/api/benches/show.json.jbuilder:2
+	app/views/api/benches/show.json.jbuilder:1
+	app/controllers/api/benches_controller.rb:19:in `show'
+
+Completed 500 Internal Server Error in 12ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 7925)
+
+
+Started GET "/" for ::1 at 2023-03-30 15:37:11 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kaiwu/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kaiwu/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 332)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1168)
+
+
+Started GET "/api/benches/2" for ::1 at 2023-03-30 15:37:16 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.7ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 5.2ms | Allocations: 4980)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 6290)
+
+
+
+NameError - undefined local variable or method `bench' for #<ActionView::Base:0x00000000004b50>
+Did you mean?  @bench:
+  app/views/api/benches/show.json.jbuilder:2
+  app/views/api/benches/show.json.jbuilder:1
+  app/controllers/api/benches_controller.rb:19:in `show'
+
+Started POST "/__better_errors/bcc8de404d36e1a3/variables" for ::1 at 2023-03-30 15:37:16 -0400
+Started GET "/api/benches/2" for ::1 at 2023-03-30 15:37:26 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.6ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.9ms | Allocations: 295)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1531)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:37:39 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 877)
+
+
+Started GET "/api/benches/2" for 127.0.0.1 at 2023-03-30 15:37:41 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.5ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.3ms | Allocations: 173)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 899)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:38:25 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:38:30 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:38:36 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:38:38 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:38:51 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 738)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-30 15:38:54 -0400
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 737)
+
+
+Started GET "/api/benches/2" for 127.0.0.1 at 2023-03-30 15:38:56 -0400
+Processing by Api::BenchesController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mBench Load (0.8ms)[0m  [1m[34mSELECT "benches".* FROM "benches" WHERE "benches"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/benches_controller.rb:18:in `show'
+  Rendering api/benches/show.json.jbuilder
+  Rendered api/benches/show.json.jbuilder (Duration: 0.5ms | Allocations: 173)
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.8ms | Allocations: 880)
+
+

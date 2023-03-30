@@ -15,7 +15,7 @@ ApplicationRecord.transaction do
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
   
-    puts "Creating users..."
+    puts "Creating users and benches..."
     # Create one user with an easy to remember username, email, and password:
     User.create!(
       username: 'Demo-lition', 
@@ -36,7 +36,7 @@ ApplicationRecord.transaction do
 
    5.times do 
     Bench.create!({
-      title: Faker::Games::SuperSmashBros.stage,
+      title: Faker::JapaneseMedia::Naruto.village,
       description: Faker::Fantasy::Tolkien.poem,
       price: rand(10..1000),
       seating: rand(1..10),

@@ -1,6 +1,6 @@
 json.benches do 
 @benches.each do |bench|
-    json.set bench.id do 
+    json.set! bench.id do 
         json.id bench.id 
         json.title bench.title 
         json.description bench.description 
